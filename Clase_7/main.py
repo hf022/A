@@ -1,4 +1,7 @@
 """
+
+Actividad
+
 total = 0 
 
 
@@ -6,6 +9,7 @@ total = 0
 #lectura c / 1 min
 lectura = 23
 total = total + lectura #acumulador
+
 
 #al finalizar la hora
 total = total / 60 #promedio
