@@ -1,0 +1,1 @@
+Cadena de ejemplo: POMPIN, Pepe, edad: 40, saldo: $ 15480.82 AR

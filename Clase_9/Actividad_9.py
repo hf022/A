@@ -106,6 +106,7 @@ t_entregas = v + s + d
 
 premio = total + 1000
 
+
 entregas = (v, s, d,)
 
 dias = ("Viernes", "Sabado", "Domingo")
@@ -142,6 +143,7 @@ if ( t_entregas > 20 ):
               
 else:
     print ("TOTAL FACTURADO: $",total )
+
 
 
 
