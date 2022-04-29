@@ -56,36 +56,20 @@ def recuperarConfigJson(direccion):
 	return config
 
 
-def pos1():
-    CONFIG = recuperarConfigJson(RUTA)
-    print ("PRIMER PUESTO:")
-    print("PUNTOS:", CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][0]["points"]) 
-    print("VICTORIAS:", CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][0]["wins"])   
-    print("PILOTO:" , CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][0]["Driver"]["givenName"] , 
-    CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][0]["Driver"]["familyName"])
+def pos():
+    for c in range(3):
+        CONFIG = recuperarConfigJson(RUTA)
+        print ("PUESTO" , c+1)
+        print("PUNTOS:", CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][c]["points"]) 
+        print("VICTORIAS:", CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][c]["wins"])   
+        print("PILOTO:" , CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][c]["Driver"]["givenName"] , 
+        CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][c]["Driver"]["familyName"])
    
-    print ("---------------")
+        print ("---------------")
 
-def pos2():
-    CONFIG = recuperarConfigJson(RUTA)
-    print ("SEGUNDO PUESTO:")
-    print("PUNTOS:", CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][1]["points"]) 
-    print("VICTORIAS:", CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][1]["wins"])   
-    print("PILOTO:" , CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][1]["Driver"]["givenName"] , 
-    CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][1]["Driver"]["familyName"])
-
-    print ("---------------")
-
-def pos3():
-    CONFIG = recuperarConfigJson(RUTA)
-    print ("TERCER PUESTO:")
-    print("PUNTOS:", CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][2]["points"]) 
-    print("VICTORIAS:", CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][2]["wins"])   
-    print("PILOTO:" , CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][2]["Driver"]["givenName"] , 
-    CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][2]["Driver"]["familyName"])
   
 
 
 if (__name__ == "__main__"):
-	pos1() ,pos2(), pos3()
+	pos() 
 
