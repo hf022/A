@@ -1,5 +1,6 @@
 """ 
 
+
 CODIGO PEDIDOS RAPIDOS
 
 LEER con tranquilidad el enunciado y analizar los pasos lógicos a seguir. Apoyarse en un diagrama de flujo simplificado y luego 
@@ -86,3 +87,4 @@ while (True):
             print("Error al conectar con el servidor de logs")
         else:
             print(proceso["mensaje"])
+

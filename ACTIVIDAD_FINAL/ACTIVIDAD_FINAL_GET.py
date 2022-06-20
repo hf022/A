@@ -1,5 +1,6 @@
 """ 
 
+
 CODIGO PEDIDOS RAPIDOS
 
 LEER con tranquilidad el enunciado y analizar los pasos lógicos a seguir. Apoyarse en un diagrama de flujo simplificado y luego 
@@ -52,6 +53,7 @@ debe comenzar ejecutando una función llamada main().
 """
 
 import json
+from zlib import DEF_BUF_SIZE
 import requests
 
 
@@ -66,8 +68,7 @@ def main ():
 	print(type(solicitud_json))
 	print(solicitud_json["productos"])
 
-    
-	
+
 
 if (__name__ == "__main__"):
 	main() 
