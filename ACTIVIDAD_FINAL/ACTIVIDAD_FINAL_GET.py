@@ -1,6 +1,4 @@
 """ 
-
-
 CODIGO PEDIDOS RAPIDOS
 
 LEER con tranquilidad el enunciado y analizar los pasos lógicos a seguir. Apoyarse en un diagrama de flujo simplificado y luego 
