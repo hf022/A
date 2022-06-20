@@ -67,6 +67,7 @@ def main ():
 	print(solicitud_json["productos"])
 
     
+	
 
 if (__name__ == "__main__"):
 	main() 

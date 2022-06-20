@@ -77,6 +77,7 @@ while (True):
         return False
 
 
+
     if (__name__ == "__main__"):
         parametros = { "id": id, "producto": [productos] }
         proceso = enviar_pedido(parametros)
