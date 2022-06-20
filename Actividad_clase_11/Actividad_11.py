@@ -40,20 +40,16 @@ directa o insertado en otro, y comenzar el flujo principal de c√≥digo desde all√
 """
 
 
-
-
-
 import json
-
-
+import requests
 
 RUTA = "Actividad_clase_11/driverStandings.json" 
 
 def recuperarConfigJson(direccion):
-	archivo = open(direccion, "r") 
-	config = json.load(archivo)
-	archivo.close()
-	return config
+    archivo = open(direccion, "r",  encoding="UTF-8")  #encoding="UTF-8" es para que reconozca los tildes y otros caracteres.
+    config = json.load(archivo)
+    archivo.close()
+    return config
 
 
 def pos():
@@ -62,8 +58,12 @@ def pos():
         print ("PUESTO" , c+1)
         print("PUNTOS:", CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][c]["points"]) 
         print("VICTORIAS:", CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][c]["wins"])   
-        print("PILOTO:" , CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][c]["Driver"]["givenName"] , 
-        CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][c]["Driver"]["familyName"])
+        #print("PILOTO:" , CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][c]["Driver"]["givenName"] , 
+        #CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][c]["Driver"]["familyName"])
+        nombre = (CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][c]["Driver"]["givenName"])
+        apellido = (CONFIG["MRData"]["StandingsTable"]["StandingsLists"][0]["DriverStandings"][c]["Driver"]["familyName"])
+        print ("PILOTO: " ,nombre , apellido)
+        
    
         print ("---------------")
 
