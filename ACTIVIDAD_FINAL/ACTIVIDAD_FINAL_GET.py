@@ -52,22 +52,23 @@ debe comenzar ejecutando una función llamada main().
 """
 
 import json
-from zlib import DEF_BUF_SIZE
 import requests
+import pprint
 
 
 
 TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMiLCJub21icmUiOiJhbHVtbm8ifQ.eC452_kHQbCP4wDVvN6nl5Vx8V6HhQP8D5EljApFXS8"
 RUTA = f"http://pad19.com:3030/productos/10?token={TOKEN}"
 
+
 def main ():
 
 	solicitud = requests.get(RUTA)
 	solicitud_json = solicitud.json()
-	print(type(solicitud_json))
-	print(solicitud_json["productos"])
-
-
+	pprint.pprint(solicitud_json)
+	
 
 if (__name__ == "__main__"):
 	main() 
+
+
